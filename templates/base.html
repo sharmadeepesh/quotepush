@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quote Push</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'css/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+
+<body id="top">
+
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('{% static 'img/demo/backgrounds/01.jpg' %}');"> 
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <div id="logo" class="fl_left">
+        <h1><a href="{% url 'index' %}">Quote Push</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'random' %}">Random Quote</a>
+          <li><a href="{% url 'many' %}">Bulk Quotes</a>
+          <li><a href="https://www.github.com/sharmadeepesh/quotepush/">Github</a></li>
+          <li><a href="https://sharmadeepesh.github.io">Developer</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  
+
+  <div id="pageintro" class="hoc clear">
+    <article> 
+      <footer><a class="btn btn-primary" href="{% url 'random' %}">Get A Quote</a></footer>
+    </article>
+  </div>
+</div>
+
+<!-- End Top Background Image Wrapper -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <ul class="nospace group services">
+      <li class="one_third first">
+        <article><a href="#"><i class="fa fa-2x fa-registered"></i></a>
+          <h6 class="heading font-x1">Goals are Crucial</h6>
+          <p>The best way to keep motivation high is to take your jobs one bite at a time.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-2x fa-renren"></i></a>
+          <h6 class="heading font-x1">More Engagement</h6>
+          <p>If you aren’t motivated, you won’t be nearly as engrossed in your work and won’t pay as close of an eye to it.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-2x fa-resistance"></i></a>
+          <h6 class="heading font-x1">Give a Reason Why</h6>
+          <p>A purpose will make any task easier to accomplish.</p>
+        </article>
+      </li>
+    </ul>
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<div class="wrapper bgded overlay" style="background-image:url('{% static 'img/demo/backgrounds/02.jpg' %}');">
+  <div class="hoc container clear"> 
+    <div class="sectiontitle">
+      <h6 class="heading">Get Motivated</h6>
+    </div>
+    <div class="group">
+      <div class="two_third first">
+        <p><strong>How will motivation benefit me?</strong></p>
+        <p>if you are motivated about what you are doing, you are going to be more engaged. If you aren’t motivated, you won’t be nearly as engrossed in your work and won’t pay as close of an eye to it. There are two main ways this is crucial. </p>
+        <p class="btmspace-30">For repetitive work or tasks, this means that you will be more attentive to detail, making you more detail-oriented and thoughtful of the task at hand.</p>
+        <footer><a class="btn" href="https://addicted2success.com/motivation/5-important-facts-you-need-to-know-about-motivation/">Read More &raquo;</a></footer>
+      </div>
+      <div class="one_third">
+        <p><strong>Check this out</strong></p>
+        <figure class="videocontainer"> 
+          <!-- Important: Any type of video called via "iframe" must be in a container using class="videocontainer" -->
+          <iframe src="https://www.youtube.com/embed/67K9XmBInYk?modestbranding=1&amp;showinfo=0&amp;vq=hd1080&amp;rel=0&amp;wmode=transparent" allowfullscreen style="border:none;"></iframe>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <strong class="fl_left">Quote Push</strong>
+    <strong class="fl_right">Made with 0 motivation</strong>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'scripts/jquery.min.js' %}"></script>
+<script src="{% static 'scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>
