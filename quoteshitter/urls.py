@@ -7,7 +7,7 @@ from many_quotes import views as many_quotes_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('random',random_views.get_random_quote,name="random"),
+    path('random/',random_views.get_random_quote,name="random"),
     path('',views.index,name="index"),
-    path('quotes',many_quotes_views.many_quotes,name="many"),
+    path('quotes/',many_quotes_views.many_quotes,name="many"),
 ]

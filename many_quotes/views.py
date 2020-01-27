@@ -3,20 +3,29 @@ import requests
 import json
 from random import seed
 from random import randint
+from get_random_quote.models import Quote
 
 def many_quotes(request):
-    count = 10
     if request.method == "POST":
+        quote = Quote.objects.all()
+        count = 10
         quotes = {}
+        filename = "static/quotes.json"
         try:
             count = int(request.POST.get('count'))
         except ValueError:
             pass
-        content = requests.get('https://programming-quotes-api.herokuapp.com/quotes').content
-        response = json.loads(content)
+        with open(filename, 'r+') as j:
+            response = json.loads(j.read())
         while len(quotes) != count:
-            value = randint(0, 10)
-            quotes[response[value]['en']] = response[value]['author']
+            value = randint(444503,506592)
+            if (quote.filter(quote=response['data'][str(value)]['quote'])):
+                quote_temp = quote.filter(quote=response['data'][str(value)]['quote'])
+                quotes[quote_temp[0].quote] = quote_temp[0].author
+            else:
+                quote_temp = quote.create(quote=response['data'][str(value)]['quote'], author=response['data'][str(value)]['author'])
+                quote_temp.save()
+                quotes[quote_temp.quote] = quote_temp.author
         data = {
             'quotes' : quotes,
         }
