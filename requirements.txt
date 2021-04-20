@@ -1,7 +1,7 @@
 asgiref==3.2.3
 astroid==2.3.3
 attrs==19.3.0
-autobahn==19.11.1
+autobahn==20.12.3
 Automat==0.8.0
 beautifulsoup4==4.8.1
 certifi==2019.9.11
